@@ -30,6 +30,7 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
     - [Terminal colors](#terminal-colors)
     - [Shell](#shell)
   - [Extras](#extras)
+    - [Git configurations](#git-configurations)
     - [rEFInd](#refind)
     - [Gedit Nord theme](#gedit-nord-theme)
     - [Theme Flatpak apps](#theme-flatpak-apps)
@@ -310,6 +311,13 @@ Terminal colors based on the [*Nord*](https://github.com/arcticicestudio/nord-gn
 - Replace the files `.p10k.zsh` and `.zshrc` into the `Home` folder
 
 ## Extras
+
+### Git configurations
+```sh
+git config --global init.defaultBranch main
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
 
 ### rEFInd
 

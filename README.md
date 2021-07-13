@@ -83,7 +83,7 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
 ### Enable flathub
 - Enable flathub support
     ```sh
-        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     ```
 
 ### Microsoft core fonts
@@ -126,6 +126,8 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
     ```sh
     sudo dnf install -y vim
     ```
+    - Copy the `.vim` folder and `.vimrc` file to the `Home` directory
+    - Open any file with vim and run `PlugInstall`
 
 ### Java
 
@@ -225,11 +227,11 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
     - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
         - Disable search, Disable hotcorner, Set Workspace Switcher Size to 10%
     - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+    - [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/)
         - `Schedule:` Uncheck automatic time source, Check Always show on-demand controls, Manual schedule from 9:00 to 20:00. Keyboard shortcut: `Shift+Ctrl+Super+T`. Button location `None`
         - `GTK Theme:` Check Manual variants. Day variant: `Nordic-Polar`. Night variant: `Flat-Remix-GTK-Blue-Darkest-NoBorder`
         - `Shell Theme:` Check Manual variants. Day variant: `Nordic-Polar`. Night variant: `Flat-Remix-Blue-Darkest-fullPanel`
         - `Backgrounds:` Check Switch Backgrounds and select day and night background
-    - [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/)
     - [Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
     - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
         - Auto-Copy to Clipboard: Imgage Data. 
@@ -313,15 +315,24 @@ Terminal colors based on the [*Nord*](https://github.com/arcticicestudio/nord-gn
 ## Extras
 
 ### Git configurations
+
 ```sh
 git config --global init.defaultBranch main
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
+### Install OpenSSL
+
+- GSConnect requires to install OpenSSL to work
+    ```sh
+    sudo dnf install openssl
+    ```
+
+
 ### rEFInd
 
-- Install refind
+- Download the most recent version of [refind](https://sourceforge.net/projects/refind/files/) and then install:
   ```sh
   sudo rpm -Uvh refind-0.13.2-1.x86_64.rpm
   sudo refind-install
@@ -332,6 +343,7 @@ git config --global user.name "Your Name"
   ```
 
 ### Gedit Nord theme
+
 - Copy the `nord.xml` file into `~/.local/share/gedit/styles`
 
 ### Theme Flatpak apps
@@ -341,8 +353,16 @@ git config --global user.name "Your Name"
     sudo flatpak override --filesystem=~/.themes
     ```
 
+### Enable color folders
+
+- Enable color folders for nautilus file manager
+    ```sh
+    sudo dnf copr enable kleong/folder-color
+    sudo dnf install folder-color-common folder-color-nautilus
+    ```
+
 ### XAMPP
-- Download and install from the official website
+- Download and install from the [official website](https://www.apachefriends.org/download.html)
 - Install missing dependency *libnsl*
     ```sh
     sudo dnf install -y libnsl

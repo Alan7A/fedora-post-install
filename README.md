@@ -47,8 +47,7 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
     ```
  - Run
     ```sh
-    sudo dnf update
-    sudo dnf upgrade
+    sudo dnf up
     ```
 
 ### Settings app
@@ -116,9 +115,14 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
    sudo dnf check-update
-   sudo dnf install code
+   sudo dnf install -y code
    ```
 - Turn on settings Sync
+- Enable "Open in Code" context menu for Nautilus. [source](https://github.com/harry-cpp/code-nautilus)
+  ```sh
+  wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
+
+  ```
 
 ### Vim
 
@@ -341,6 +345,11 @@ git config --global user.name "Your Name"
   ```sh
   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
   ```
+  
+### Fix dualboot showing different times
+    ```sh
+    timedatectl set-local-rtc 1
+    ```
 
 ### Gedit Nord theme
 

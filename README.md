@@ -226,6 +226,7 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
         - Brightness 0.60, Sigma: 20, Uncheck panel
     - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
     - [Color Picker](https://extensions.gnome.org/extension/3396/color-picker/)
+    - [Tray Icons](https://extensions.gnome.org/extension/1503/tray-icons/)
     - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
     - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
     - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
@@ -322,6 +323,7 @@ Terminal colors based on the [*Nord*](https://github.com/arcticicestudio/nord-gn
 
 ```sh
 git config --global init.defaultBranch main
+git config --global core.editor "vim"
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```

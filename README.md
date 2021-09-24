@@ -234,8 +234,8 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
     - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
     - [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/)
         - `Schedule:` Uncheck automatic time source, Check Always show on-demand controls, Manual schedule from 9:00 to 20:00. Keyboard shortcut: `Shift+Ctrl+Super+T`. Button location `None`
-        - `GTK Theme:` Check Manual variants. Day variant: `Nordic-Polar`. Night variant: `Flat-Remix-GTK-Blue-Darkest-NoBorder`
-        - `Shell Theme:` Check Manual variants. Day variant: `Nordic-Polar`. Night variant: `Flat-Remix-Blue-Darkest-fullPanel`
+        - `GTK Theme:` Check Manual variants. Day variant: `Nordic-Polar`. Night variant: `TokyoNight`
+        - `Shell Theme:` Check Manual variants. Day variant: `Nordic-Polar`. Night variant: `TokyoNight`
         - `Backgrounds:` Check Switch Backgrounds and select day and night background
     - [Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
     - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
@@ -246,7 +246,7 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
         ```sh
         sudo dnf install gnome-shell-extension-pop-shell
         ```
-        - Check Show active hint. Hint color is `#3484E2` with transparency ~85$
+        - Check Show active hint. Hint color is `#7AA2F6`
 
 ### Keyboard Shortcuts
 
@@ -284,6 +284,12 @@ Open `Settings` and go to `Keyboard` -> `Keyboard shortcuts`
     ```
 
 ### Terminal colors
+
+- Run the following command to start [Gogh](https://mayccoll.github.io/Gogh/)
+    ```sh
+    bash -c  "$(curl -sLo- https://git.io/vQgMr)" 
+    ```
+    - Themes to install: **42 53 132 140 141 197**
 
 Terminal colors based on the *Flat Remix* color scheme.
 

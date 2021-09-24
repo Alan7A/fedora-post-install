@@ -9,6 +9,9 @@ set mouse=a
 set number
 set incsearch
 set noshowmode
+" Use case insensitive search, except when using capital letters
+set ignorecase
+set smartcase
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'

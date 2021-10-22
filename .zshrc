@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias xampp="sudo /opt/lampp/lampp start"
 alias xampp_stop="sudo /opt/lampp/lampp stop"
+alias up="sudo dnf up"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

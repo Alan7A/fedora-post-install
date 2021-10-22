@@ -4,7 +4,6 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
 
 ## Table of contents
 
-  - [Table of contents](#table-of-contents)
   - [Initial settings](#initial-settings)
     - [Enable DNF fastest mirror and update](#enable-dnf-fastest-mirror-and-update)
     - [Settings app](#settings-app)
@@ -242,7 +241,7 @@ Set of commands and files to make a fresh install of Fedora Workstation look nic
         - Auto-Copy to Clipboard: Imgage Data. 
         - Default Filename: `{N}-{Y}{m}{d}-{w}x{h}`. 
         - Keybindings Select Area: `Shift+Super+S`
-    - Pop Shell (system may crash when activated for the first time)
+    - [Pop Shell](https://github.com/pop-os/shell) (system may crash when activated for the first time)
         ```sh
         sudo dnf install gnome-shell-extension-pop-shell
         ```
@@ -292,12 +291,6 @@ Open `Settings` and go to `Keyboard` -> `Keyboard shortcuts`
     - Themes to install: **42 53 132 140 141 197**
 
 Terminal colors based on the *Flat Remix* color scheme.
-
-![Flat Remix Terminal](Screenshots/TerminalColors.png)
-
-Terminal colors based on the [*Nord*](https://github.com/arcticicestudio/nord-gnome-terminal) color scheme.
-
-![Nord Terminal](Screenshots/NordTerminal.png)
 
 ### Shell
 

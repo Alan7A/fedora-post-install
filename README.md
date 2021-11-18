@@ -2,6 +2,12 @@
 
 Set of commands and files to make a fresh install of Fedora Workstation look nice. By [Alan Delgado](https://github.com/Alan7A).
 
+Day Theme (Nord)
+![Nord](/Screenshots/Nord.png)
+
+Night Theme (Tokyo Night)
+![Nord](/Screenshots/TokyoNight.png)
+
 ## Table of contents
 
   - [Initial settings](#initial-settings)

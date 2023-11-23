@@ -106,9 +106,39 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias aws="/usr/local/bin/aws"
 alias xampp="sudo /opt/lampp/lampp start"
 alias xampp_stop="sudo /opt/lampp/lampp stop"
-alias up="sudo dnf up"
+alias up="sudo dnf up && flatpak update"
+alias emulator="~/Android/Sdk/emulator/emulator -avd Pixel_4_API_31"
+alias cdtrade="cd ~/Documents/Trade"
+alias switchjava="sudo alternatives --config java"
+alias ga="git add ."
+alias gc="git commit"
+alias gca="git commit --amend --no-edit --no-verify"
+alias gp="git push"
+alias as="amplify status"
+alias ap="amplify push --y"
+alias agc="amplify api gql-compile"
+alias awstoken="aws sts get-session-token --duration-seconds 129600 --serial-number arn:aws:iam::877336019765:mfa/alan.delgado --token-code"
+alias nosqlworkbench="sudo ./Downloads/DynamoDB/NoSQL\ Workbench-linux-3.5.0.AppImage --no-sandbox"
+
+# React Native Environment Variables
+export ANDROID_SDK_ROOT=/home/alan7a/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# bun completions
+[ -s "/home/alan7a/.bun/_bun" ] && source "/home/alan7a/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -174,9 +174,29 @@ Preview
   flatpak install flathub org.onlyoffice.desktopeditors
   ```
 - Pinta
+  ```sh
+  flatpak install flathub com.github.PintaProject.Pinta
+  ```
 - Microsoft Edge
+  ```sh
+  flatpak install flathub com.microsoft.Edge
+  ```
 - Resources
+  ```sh
+  flatpak install flathub net.nokyan.Resources
+  ```
 - Mission center
+  ```sh
+  flatpak install flathub io.missioncenter.MissionCenter
+  ```
+- Flatseal
+  ```sh
+  flatpak install flathub com.github.tchx84.Flatseal
+  ```
+- Easy Effects
+  ```sh
+  flatpak install flathub com.github.wwmm.easyeffects
+  ```
 
 ## Customization
 
@@ -236,20 +256,15 @@ Preview
   ```
 - Go to the [Gnome Extensions](https://extensions.gnome.org/) website and search and activate the following extensions
   - [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
-    - Brightness 0.60, Sigma: 20, Uncheck panel, Blur apps: nautilus, terminal, code, discord
+    - Brightness 0.60, Sigma: 20, Blur apps: nautilus, terminal, code, discord
   - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
   - [Color Picker](https://extensions.gnome.org/extension/3396/color-picker/)
-  - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
   - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
   - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
     - Disable search, Disable hotcorner, Set Workspace Switcher Size to 10%
   - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
   - [Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
   - [Tray Icons Realoaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
-  - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
-    - Auto-Copy to Clipboard: Imgage Data.
-    - Default Filename: `{N}-{Y}{m}{d}-{w}x{h}`.
-    - Keybindings Select Area: `Shift+Super+S`
   - [Pop Shell](https://github.com/pop-os/shell) (system may crash when activated for the first time)
     ```sh
     sudo dnf install gnome-shell-extension-pop-shell xprop
@@ -266,8 +281,6 @@ Open `Settings` and go to `Keyboard` -> `Keyboard shortcuts`
 - Launchers
   - Launch calculator: `Super+C`
   - Launch settings: `Super+S`
-- Navigate applications and windows
-  - Launch and switch applications: `Super+Space`
 - Navigation
   - Hide all normal windows: `Super+D`
   - Move to workspace on the left: `Ctrl+Super+Left`
@@ -275,7 +288,15 @@ Open `Settings` and go to `Keyboard` -> `Keyboard shortcuts`
   - Move window one workspace to the left: `Shift+Super+Left`
   - Move window one workspace to the right: `Shift+Super+Right`
 - Custom shortcuts
-  - Launch terminal: `Super+T`
+  - Launch terminal: `Super+T` - Code: `gnome-terminal`
+  - Launch vscode: `Super+V` - Code: `code`
+  - Launch discord: `Super+W` - Code: `flatpak run com.discordapp.Discord`
+  - Launch gnome text editor: `Super+G` - Code: `gnome-text-editor`
+- Tiling
+  - Toggles a window between floating and tiling: `Super+H`
+- Navigate applications and windows
+  - Launch and switch applications: `Super+Space`
+  - Switch focus to window left: `Super+Left`
 
 ### Terminal colors
 
@@ -341,9 +362,20 @@ git config --global user.name "Your Name"
 
 ### Fix dualboot showing different times
 
-    ```sh
-    timedatectl set-local-rtc 1
-    ```
+```sh
+timedatectl set-local-rtc 1
+```
+
+### Fix login screen in wrong monitor
+
+```sh
+sudo cp -v ~/.config/monitors.xml /var/lib/gdm/.config/
+sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
+```
+
+### Fix bluetooth devices in dualboot
+
+- Follow this [guide](https://github.com/spxak1/weywot/blob/main/guides/bt_dualboot.md)
 
 ### Gnome Text Editor theme
 

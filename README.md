@@ -394,6 +394,9 @@ sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
 
 - This command makes flatpak apps to use the application's theme
   ```sh
+  curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl
+  chmod +x betterdiscordctl
+  sudo mv betterdiscordctl /usr/local/bin
   betterdiscordctl --d-install flatpak install | uninstall
   ```
 

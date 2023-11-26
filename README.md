@@ -390,6 +390,13 @@ sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
   sudo flatpak override --filesystem=~/.themes
   ```
 
+### Install Betteriscord
+
+- This command makes flatpak apps to use the application's theme
+  ```sh
+  betterdiscordctl --d-install flatpak install | uninstall
+  ```
+
 ### Enable color folders
 
 - Enable color folders for nautilus file manager

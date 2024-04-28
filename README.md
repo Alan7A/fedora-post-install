@@ -194,8 +194,14 @@ Preview
   flatpak install flathub com.github.tchx84.Flatseal
   ```
 - Easy Effects
+
   ```sh
   flatpak install flathub com.github.wwmm.easyeffects
+  ```
+
+- Obsidian
+  ```sh
+  flatpak install flathub md.obsidian.Obsidian
   ```
 
 ## Customization
@@ -260,6 +266,10 @@ Preview
   - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
   - [Color Picker](https://extensions.gnome.org/extension/3396/color-picker/)
   - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
+    Send to device from nautilus
+    ```sh
+    sudo dnf install -y nautilus-python nautilus-extensions
+    ```
   - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
     - Disable search, Disable hotcorner, Set Workspace Switcher Size to 10%
   - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
@@ -377,6 +387,12 @@ sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
 
 - Follow this [guide](https://github.com/spxak1/weywot/blob/main/guides/bt_dualboot.md)
 
+### Fix postman crashing after login
+
+```sh
+openssl req -subj '/C=US/CN=Postman Proxy' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout ~/.var/app/com.getpostman.Postman/config/Postman/proxy/postman-proxy-ca.key -out ~/.var/app/com.getpostman.Postman/config/Postman/proxy/postman-proxy-ca.crt
+```
+
 ### Gnome Text Editor theme
 
 - Download the [Tokyo Night Theme](https://www.gnome-look.org/p/1997072) and extract the files
@@ -389,6 +405,7 @@ sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
   ```sh
   sudo flatpak override --filesystem=~/.themes
   ```
+- Or you can use [stylepak](https://github.com/refi64/stylepak)
 
 ### Install Betteriscord
 

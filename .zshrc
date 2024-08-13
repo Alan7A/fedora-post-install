@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,18 +110,13 @@ alias aws="/usr/local/bin/aws"
 alias xampp="sudo /opt/lampp/lampp start"
 alias xampp_stop="sudo /opt/lampp/lampp stop"
 alias up="sudo dnf up && flatpak update"
-alias emulator="~/Android/Sdk/emulator/emulator -avd Pixel_4_API_31"
+alias emulator="~/Android/Sdk/emulator/emulator -avd Medium_Phone_API_34"
 alias cdtrade="cd ~/Documents/Trade"
 alias switchjava="sudo alternatives --config java"
 alias ga="git add ."
 alias gc="git commit"
 alias gca="git commit --amend --no-edit --no-verify"
 alias gp="git push"
-alias as="amplify status"
-alias ap="amplify push --y"
-alias agc="amplify api gql-compile"
-alias awstoken="aws sts get-session-token --duration-seconds 129600 --serial-number arn:aws:iam::877336019765:mfa/alan.delgado --token-code"
-alias nosqlworkbench="sudo ./Downloads/DynamoDB/NoSQL\ Workbench-linux-3.5.0.AppImage --no-sandbox"
 
 # React Native Environment Variables
 export ANDROID_SDK_ROOT=/home/alan7a/Android/Sdk

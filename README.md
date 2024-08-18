@@ -15,10 +15,8 @@ Preview
   - [Enable third party repositories](#enable-third-party-repositories)
   - [Enable rpm-fusion](#enable-rpm-fusion)
   - [Enable flathub](#enable-flathub)
-  - [Microsoft core fonts](#microsoft-core-fonts)
 - [NVIDIA Drivers](#nvidia-drivers)
 - [Apps installation](#apps-installation)
-  - [Google Chrome](#google-chrome)
   - [Visual Studio Code](#visual-studio-code)
   - [Vim](#vim)
   - [Java](#java)
@@ -88,14 +86,6 @@ Preview
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   ```
 
-### Microsoft core fonts
-
-- Add repository and install additional fonts
-  ```sh
-  sudo dnf install curl cabextract xorg-x11-font-utils fontconfig
-  sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-  ```
-
 ## NVIDIA Drivers
 
 **It is extremely IMPORTANT to restart and select GNOME Xorg in the login screen**
@@ -108,9 +98,13 @@ Preview
 
 ## Apps installation
 
-### Google Chrome
+### Kitty terminal
 
-- Open the `Software app` then search for `Google Chrome` and install
+- Install kitty terminal
+  ```sh
+  sudo dnf install -y kitty
+  ```
+- Copy the `kitty.conf` file into the `~/.config/kitty` folder
 
 ### Visual Studio Code
 
@@ -155,6 +149,10 @@ Preview
 
 ### Flathub apps
 
+- Google Chrome
+  ```sh
+  flatpak install flathub com.google.Chrome
+  ```
 - Geary email client
   ```sh
   flatpak install flathub org.gnome.Geary
@@ -194,11 +192,9 @@ Preview
   flatpak install flathub com.github.tchx84.Flatseal
   ```
 - Easy Effects
-
   ```sh
   flatpak install flathub com.github.wwmm.easyeffects
   ```
-
 - Obsidian
   ```sh
   flatpak install flathub md.obsidian.Obsidian
@@ -298,7 +294,7 @@ Open `Settings` and go to `Keyboard` -> `Keyboard shortcuts`
   - Move window one workspace to the left: `Shift+Super+Left`
   - Move window one workspace to the right: `Shift+Super+Right`
 - Custom shortcuts
-  - Launch terminal: `Super+T` - Code: `gnome-terminal`
+  - Launch terminal: `Super+T` - Code: `kitty`
   - Launch vscode: `Super+V` - Code: `code`
   - Launch discord: `Super+W` - Code: `flatpak run com.discordapp.Discord`
   - Launch gnome text editor: `Super+G` - Code: `gnome-text-editor`
@@ -333,6 +329,10 @@ Open `Settings` and go to `Keyboard` -> `Keyboard shortcuts`
 - Install plugin [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
   ```sh
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  ```
+- Install plugin [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  ```sh
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 - Install [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
   ```sh
